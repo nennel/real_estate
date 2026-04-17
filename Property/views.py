@@ -26,7 +26,7 @@ class PropertyDetailView(DetailView):
         context['breadcrumb'] = [
             {'name': 'Home', 'url': '/'},
             {'name': 'Property', 'url':'/'},
-            {'name': property_obj.name, 'url': f'/details/{property_obj.pk}'}
+            {'name': property_obj.name, 'url': ''}
         ]
         return context
 

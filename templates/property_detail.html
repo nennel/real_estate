@@ -9,6 +9,16 @@
 <body>
     <table>
     <div class="container">
+        <nav class="mt-3">
+        {% for crumb in breadcrumb %}
+            {% if crumb.url %}
+                <a href="{{ crumb.url }}">{{ crumb.name }}</a> &gt;
+            {% else %}
+                <span>{{ crumb.name }}</span>
+            {% endif %}
+        {% endfor %}
+        </nav>
+        
         <h1>{{ property.name }}</h1>
         <p>{{ property.description }}</p>
         <p>{{ property.price }}</p>
